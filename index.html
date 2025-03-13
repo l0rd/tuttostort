@@ -2,14 +2,16 @@
 layout: layout.html
 ---
 
+<script src="/pdfjs/build/pdf.mjs" type="module"></script>
+
 {% for text in collections.text %}
 <div>
+    <img src="{{ page.url }}img/tuttostort-{{ text.data.issuenum }}.jpg" />
     <h2>{{ text.data.issuenum }}</h2>
     <a
         href="{{ page.url }}pdfjs/web/viewer.html?file=%2Fpdfs%2Ftuttostort-{{ text.data.issuenum }}.pdf"
         >pdf</a
     >
-    <!-- href="{{ page.url }}pdfjs/web/viewer.html?file=%2Fpdfs%2Ftuttostort-{{ text.data.issuenum }}.pdf" -->
     |
     <a href="{{ text.url }}">testo</a>
 </div>
