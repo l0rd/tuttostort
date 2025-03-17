@@ -4,9 +4,12 @@ layout: layout.html
 
 <script src="/pdfjs/build/pdf.mjs" type="module"></script>
 
+<div class="container">
 {% for text in collections.text %}
-<div>
-    <img src="{{ page.url }}img/tuttostort-{{ text.data.issuenum }}.jpg" />
+<div class="tile">
+	<a href="{{ page.url}}pdfjs/web/viewer.html?file=%2fpdfs%2ftuttostort-{{ text.data.issuenum }}.pdf">
+		<img src="{{ page.url }}img/tuttostort-{{ text.data.issuenum }}.jpg" />
+	</a>
     <h2>{{ text.data.issuenum }}</h2>
     <a
         href="{{ page.url }}pdfjs/web/viewer.html?file=%2Fpdfs%2Ftuttostort-{{ text.data.issuenum }}.pdf"
@@ -16,3 +19,4 @@ layout: layout.html
     <a href="{{ text.url }}">testo</a>
 </div>
 {% endfor %}
+</div>
